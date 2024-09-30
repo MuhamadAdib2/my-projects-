@@ -1,0 +1,62 @@
+# Sentiment Analysis Project
+
+This project is a sentiment analysis task based on a dataset from my university. The task involves classifying text data into sentiment categories using machine learning techniques. I used logistic regression for the classification and achieved a Macro F1 score of 57%, which was above the university's baseline.
+
+## Table of Contents
+- [Overview](#overview)
+- [Dataset](#dataset)
+- [Modeling Approach](#modeling-approach)
+- [Performance](#performance)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Results](#results)
+- [Future Improvements](#future-improvements)
+
+## Overview
+This project aims to perform sentiment analysis using a basic machine learning pipeline, involving data preprocessing, feature extraction using the bag-of-words model, and classification using logistic regression.
+
+## Dataset
+- **Source**: University-provided dataset.
+- **Format**: Tab-separated file (`train.tsv`) with two columns:
+  - `text`: The textual data to analyze.
+  - `sentiment`: The sentiment label associated with the text (e.g., positive, negative, neutral).
+
+## Modeling Approach
+The following steps were followed for the sentiment analysis task:
+1. **Data Preprocessing**: 
+   - Loading the dataset and splitting it into training and testing sets (80/20 split).
+2. **Feature Extraction**:
+   - Using `CountVectorizer` to convert text into a bag-of-words feature matrix.
+3. **Model**:
+   - Logistic Regression was chosen as the model for sentiment classification.
+4. **Evaluation**:
+   - The model was evaluated using the Macro F1 score, which is a good measure when working with imbalanced datasets.
+
+## Performance
+The performance of the logistic regression model on the test set:
+- **Macro F1 Score**: `0.57`
+
+## Installation
+To run this project locally, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    https://github.com/MuhamadAdib2/my-projects-.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd Sentiment-Analysis-Project
+    ```
+3. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+   (The `requirements.txt` should include dependencies like `pandas`, `scikit-learn`, etc.)
+
+4. Download the dataset (if not provided):
+    - Add your dataset to the root directory or update the file path in the script.
+
+## Usage
+Run the sentiment analysis script:
+```bash
+python sentiment_analysis.py
